@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dzień Chłopaka — Niespodzianka</title>
+  <meta name="description" content="Dwa prezenty i morze miłości — specjalnie dla Ciebie.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/tee-front.jpg" as="image">
+  <link rel="preload" href="assets/poster.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">LINKIN ♥ LOVE</h1>
+      <nav class="nav">
+        <a href="#gifts">Prezenty</a>
+        <a href="#wishes">Życzenia</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <h2>Dla mojego Męża na Dzień Chłopaka</h2>
+      <p class="subtitle">Dwa prezenty. Jedno serce. Nieskończona miłość.</p>
+      <a class="btn" href="#gifts">Zobacz niespodzianki</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="gifts" class="gifts container">
+      <article class="card">
+        <div class="media">
+          <img src="assets/tee-front.jpg" alt="Koszulka Linkin Park — przód" data-gallery="tee">
+          <img src="assets/tee-back.jpg" alt="Koszulka Linkin Park — tył" data-gallery="tee" class="thumb-secondary">
+        </div>
+        <div class="content">
+          <h3>Koszulka Linkin Park — FROM ZERO</h3>
+          <p>Czarna jak noc koncertowa, gotowa na trasę… i na nasze wspólne wyjścia ♥</p>
+          <button class="btn ghost" data-open="tee">Powiększ</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media">
+          <img src="assets/poster.jpg" alt="Plakat Linkin Park — From Zero World Tour" data-gallery="poster">
+        </div>
+        <div class="content">
+          <h3>Plakat — From Zero World Tour</h3>
+          <p>Na ścianę, żeby każdy dzień miał ten koncertowy błysk. Niech przypomina, że razem możemy wszystko.</p>
+          <button class="btn ghost" data-open="poster">Powiększ</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="wishes" class="wishes">
+      <div class="container">
+        <h2>Moje życzenia dla Ciebie</h2>
+        <p class="heart" aria-hidden="true">♥</p>
+        <p class="message">
+          Jesteś całym moim światem i bardzo Cię kocham.
+          Życzę Ci spełnienia wszystkich marzeń, oceanu radości i wielu sukcesów —
+          w tym, co kochasz i do czego dążysz. Dziękuję, że jesteś.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made with ♥ specjalnie dla Ciebie</p>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="close" aria-label="Zamknij">&times;</button>
+    <div class="lightbox-body"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
