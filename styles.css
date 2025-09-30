@@ -1,0 +1,65 @@
+/* ===== Base ===== */
+:root{
+  --bg:#0a0a0b;
+  --ink:#e8e8ea;
+  --muted:#a2a2a7;
+  --accent:#8ef5ff;
+  --card:#121216;
+  --line:rgba(255,255,255,.08);
+  --glow:0 0 60px rgba(142,245,255,.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,Segoe UI,Roboto,Ubuntu,Arial,sans-serif}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--accent);text-decoration:none}
+.container{width:min(1100px,92%);margin-inline:auto}
+.bg-noise{position:fixed;inset:0;pointer-events:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22 opacity=%220.05%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/></filter><rect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/></svg>')}
+
+/* ===== Header ===== */
+.site-header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,rgba(0,0,0,.7),transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.logo{margin:0;font-size:18px;letter-spacing:.18em}
+.nav a{margin-left:18px;opacity:.9}
+.nav a:hover{opacity:1}
+
+/* ===== Hero ===== */
+.hero{position:relative;isolation:isolate;padding:90px 0 70px;background:
+ radial-gradient(1200px 400px at 50% -20%, rgba(142,245,255,.12), transparent 55%),
+ radial-gradient(900px 300px at 10% 10%, rgba(255,255,255,.06), transparent 60%),
+ radial-gradient(900px 300px at 90% 10%, rgba(255,255,255,.06), transparent 60%);
+border-bottom:1px solid var(--line)}
+.hero-inner{text-align:center}
+.hero h2{margin:0 0 10px;font-size:clamp(28px,5vw,44px);text-transform:uppercase;letter-spacing:.08em}
+.subtitle{color:var(--muted);margin-bottom:24px}
+.btn{display:inline-block;border:1px solid var(--accent);padding:10px 16px;border-radius:8px}
+.btn:hover{box-shadow:var(--glow)}
+.btn.ghost{border-color:var(--line);color:var(--ink);opacity:.9}
+.btn.ghost:hover{border-color:var(--accent);opacity:1}
+
+/* ===== Gifts ===== */
+.gifts{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px,1fr));gap:22px;padding:40px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card .media{position:relative}
+.card img{width:100%}
+.card .thumb-secondary{position:absolute;right:10px;bottom:10px;width:36%;border:1px solid var(--line);border-radius:8px;opacity:.95}
+.card .content{padding:16px}
+.card h3{margin:0 0 8px;font-size:20px}
+.card p{margin:0 0 14px;color:var(--muted)}
+
+/* ===== Wishes ===== */
+.wishes{padding:60px 0;border-top:1px solid var(--line);background:
+ radial-gradient(800px 260px at 50% 0%, rgba(142,245,255,.08), transparent 60%);}
+.wishes h2{text-align:center;margin:0 0 10px;font-size:clamp(24px,4.5vw,36px)}
+.wishes .heart{text-align:center;font-size:28px;margin:0 0 14px;opacity:.8}
+.message{max-width:780px;margin:0 auto;color:var(--ink);text-align:center;font-size:18px}
+
+/* ===== Footer ===== */
+.site-footer{padding:22px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted)}
+
+/* ===== Lightbox ===== */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:grid;place-items:center;padding:24px}
+.lightbox[hidden]{display:none}
+.lightbox-body{max-width:min(1000px,95vw);max-height:85vh}
+.lightbox img{width:100%;height:auto;object-fit:contain;border-radius:12px;border:1px solid var(--line);box-shadow:var(--glow)}
+.lightbox .close{position:absolute;top:16px;right:16px;background:transparent;border:1px solid var(--line);color:var(--ink);font-size:28px;line-height:1;padding:6px 10px;border-radius:8px;cursor:pointer}
+.lightbox .close:hover{border-color:var(--accent);box-shadow:var(--glow)}
